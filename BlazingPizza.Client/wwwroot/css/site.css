@@ -35,6 +35,10 @@ form {
     z-index: 1030;
 }
 
+#app {
+    height: 100%;
+}
+
 .logo {
     display: flex;
 }
