@@ -22,7 +22,7 @@ namespace BlazingPizza.Server
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            services.AddDbContext<PizzaStoreContext>(options => 
+            services.AddDbContext<PizzaStoreContext>(options =>
                 options.UseSqlite("Data Source=pizza.db"));
 
             services.AddDefaultIdentity<PizzaStoreUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -34,6 +34,7 @@ namespace BlazingPizza.Server
             services.AddAuthentication()
                 .AddIdentityServerJwt();
         }
+
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
